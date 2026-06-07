@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AUSkillBridge"
+rootProject.name = "SkillBridge"
 include ':app'
