@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/bg_primary"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <!-- Left: Icon Container (36dp circle, accent_light bg) -->
+    <FrameLayout
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_chip_skill"
+        android:layout_marginEnd="12dp">
+
+        <com.auiskillbridge.views.CategoryIconView
+            android:id="@+id/category_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <!-- Center: Category name + mentor count -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            style="@style/TextAppearance.AU.Subtitle" />
+
+        <TextView
+            android:id="@+id/category_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/text_tertiary"
+            android:textSize="12sp"
+            style="@style/TextAppearance.AU.Caption" />
+
+        <!-- Code Compatibility View (Hidden but required by CategoryAdapter) -->
+        <TextView
+            android:id="@+id/category_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Right: Chevron icon -->
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_chevron_right"
+        app:tint="@color/text_tertiary"
+        android:contentDescription="Next" />
+
+</LinearLayout>

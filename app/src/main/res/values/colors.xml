@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds -->
+    <color name="bg_primary">#FFFFFF</color>          <!-- pure white, main bg -->
+    <color name="bg_secondary">#F7F7F9</color>        <!-- page/screen bg, off-white -->
+    <color name="bg_tertiary">#F0F0F4</color>         <!-- input fields, pressed states -->
+    <color name="bg_card">#FFFFFF</color>             <!-- card surface -->
+    <color name="bg_elevated">#FAFAFA</color>         <!-- elevated card, dialog bg -->
+
+    <!-- Accent — ONE brand color, used sparingly -->
+    <color name="accent_primary">#5B4FE8</color>      <!-- deep indigo-violet, main CTA -->
+    <color name="accent_light">#EEF0FF</color>        <!-- tinted bg behind accent elements -->
+    <color name="accent_pressed">#4438C4</color>      <!-- pressed/active state of accent -->
+
+    <!-- Semantic Colors -->
+    <color name="color_success">#12A05C</color>       <!-- online dot, low urgency, available -->
+    <color name="color_success_bg">#E8F7EF</color>
+    <color name="color_warning">#D97706</color>       <!-- medium urgency, amber -->
+    <color name="color_warning_bg">#FEF3C7</color>
+    <color name="color_error">#DC2626</color>         <!-- high urgency, coral-red -->
+    <color name="color_error_bg">#FEE2E2</color>
+    <color name="color_info">#2563EB</color>          <!-- info badges -->
+    <color name="color_info_bg">#DBEAFE</color>
+
+    <!-- Text — ink-sharp hierarchy -->
+    <color name="text_primary">#0D0D12</color>        <!-- near-black, main text -->
+    <color name="text_secondary">#4B4B63</color>      <!-- secondary labels, subtitles -->
+    <color name="text_tertiary">#9393AA</color>       <!-- hints, placeholders, captions -->
+    <color name="text_on_accent">#FFFFFF</color>      <!-- text on accent-colored buttons -->
+    <color name="text_link">#5B4FE8</color>           <!-- tappable links, accent -->
+
+    <!-- Borders & Dividers — sharp, not heavy -->
+    <color name="border_light">#EBEBF0</color>        <!-- card borders, dividers -->
+    <color name="border_medium">#D5D5E0</color>       <!-- input borders, list dividers -->
+    <color name="border_focus">#5B4FE8</color>        <!-- focused input border -->
+
+    <!-- Department Badge Colors — muted, professional -->
+    <color name="dept_cs_bg">#EEF0FF</color>
+    <color name="dept_cs_text">#3730A3</color>
+    <color name="dept_se_bg">#DBEAFE</color>
+    <color name="dept_se_text">#1D4ED8</color>
+    <color name="dept_ee_bg">#FEF3C7</color>
+    <color name="dept_ee_text">#92400E</color>
+    <color name="dept_ce_bg">#D1FAE5</color>
+    <color name="dept_ce_text">#065F46</color>
+    <color name="dept_ai_bg">#FCE7F3</color>
+    <color name="dept_ai_text">#9D174D</color>
+    <color name="dept_ds_bg">#ECFDF5</color>
+    <color name="dept_ds_text">#065F46</color>
+    <color name="dept_me_bg">#F3F4F6</color>
+    <color name="dept_me_text">#374151</color>
+    <color name="dept_bba_bg">#FDF4FF</color>
+    <color name="dept_bba_text">#6B21A8</color>
+
+    <!-- Support other codes mapped dynamically in case the original layout or java queries it -->
+    <color name="dept_ct_bg">#EEF0FF</color>
+    <color name="dept_ct_text">#3730A3</color>
+    <color name="dept_cyber_bg">#DBEAFE</color>
+    <color name="dept_cyber_text">#1D4ED8</color>
+    <color name="dept_biomed_bg">#FCE7F3</color>
+    <color name="dept_biomed_text">#9D174D</color>
+    <color name="dept_iaa_bg">#FDF4FF</color>
+    <color name="dept_iaa_text">#6B21A8</color>
+    <color name="dept_ausom_bg">#ECFDF5</color>
+    <color name="dept_ausom_text">#065F46</color>
+
+    <!-- Avatar palette — 8 distinct muted circles -->
+    <color name="avatar_1">#E0E7FF</color>
+    <color name="avatar_2">#FCE7F3</color>
+    <color name="avatar_3">#D1FAE5</color>
+    <color name="avatar_4">#FEF3C7</color>
+    <color name="avatar_5">#DBEAFE</color>
+    <color name="avatar_6">#FDE8E8</color>
+    <color name="avatar_7">#F3E8FF</color>
+    <color name="avatar_8">#ECFDF5</color>
+
+    <!-- Avatar text colors for reference in styles/layouts -->
+    <color name="avatar_1_text">#3730A3</color>
+    <color name="avatar_2_text">#9D174D</color>
+    <color name="avatar_3_text">#065F46</color>
+    <color name="avatar_4_text">#92400E</color>
+    <color name="avatar_5_text">#1D4ED8</color>
+    <color name="avatar_6_text">#991B1B</color>
+    <color name="avatar_7_text">#6B21A8</color>
+    <color name="avatar_8_text">#064E3B</color>
+
+    <!-- Star rating -->
+    <color name="star_filled">#F59E0B</color>
+    <color name="star_empty">#D5D5E0</color>
+
+    <!-- Bottom nav -->
+    <color name="nav_selected">#5B4FE8</color>
+    <color name="nav_unselected">#9393AA</color>
+    <color name="nav_background">#FFFFFF</color>
+    <color name="nav_indicator">#EEF0FF</color>
+
+    <!-- Additional compatibility/naming mapping if required -->
+    <color name="transparent">#00000000</color>
+    <color name="divider">#EBEBF0</color>
+    <color name="card_border">#EBEBF0</color>
+    <color name="accent_violet">#5B4FE8</color>
+    <color name="accent_violet_dim">#EEF0FF</color>
+    <color name="chip_violet_bg">@color/accent_primary</color>
+    <color name="chip_violet_text">@color/text_on_accent</color>
+</resources>

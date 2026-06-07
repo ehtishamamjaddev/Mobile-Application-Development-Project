@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AUSkillBridge"
+        tools:targetApi="31">
+
+        <!-- Splash Screen — Entry Point -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AUSkillBridge.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Onboarding — shown on first launch only -->
+        <activity
+            android:name=".OnboardingActivity"
+            android:theme="@style/Theme.AUSkillBridge" />
+
+        <!-- Main Activity — hosts BottomNavigationView + 5 fragments -->
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AUSkillBridge" />
+
+        <!-- Mentor Detail Screen -->
+        <activity
+            android:name=".MentorDetailActivity"
+            android:theme="@style/Theme.AUSkillBridge"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Post Skill Request -->
+        <activity
+            android:name=".PostRequestActivity"
+            android:theme="@style/Theme.AUSkillBridge"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Search Results -->
+        <activity
+            android:name=".SearchResultsActivity"
+            android:theme="@style/Theme.AUSkillBridge"
+            android:parentActivityName=".MainActivity" />
+
+    </application>
+
+</manifest>

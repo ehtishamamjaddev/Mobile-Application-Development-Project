@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="@dimen/radius_lg"
+    app:cardBackgroundColor="@color/bg_card"
+    app:strokeColor="@color/border_light"
+    app:strokeWidth="1dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- LEFT STRIPE: 4dp wide, full height (matches content parent) -->
+        <View
+            android:id="@+id/urgency_stripe"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_success" /> <!-- color set dynamically in Java -->
+
+        <!-- CONTENT: padding right/top/bottom 16dp, left 12dp -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="16dp">
+
+            <!-- Row 1: Avatar + Name + Urgency Badge (right side) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <com.auiskillbridge.views.AvatarTextView
+                    android:id="@+id/request_avatar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_avatar_circle"
+                    android:gravity="center"
+                    android:textColor="@color/text_on_accent"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    style="@style/TextAppearance.AU.Title" />
+
+                <TextView
+                    android:id="@+id/request_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/request_avatar"
+                    android:layout_toStartOf="@+id/request_urgency_badge"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    style="@style/TextAppearance.AU.Body" />
+
+                <TextView
+                    android:id="@+id/request_urgency_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/badge_padding_horizontal"
+                    android:paddingEnd="@dimen/badge_padding_horizontal"
+                    android:paddingTop="@dimen/badge_padding_vertical"
+                    android:paddingBottom="@dimen/badge_padding_vertical"
+                    style="@style/TextAppearance.AU.Badge" />
+            </RelativeLayout>
+
+            <!-- Row 2: Dept badge + Semester -->
+            <TextView
+                android:id="@+id/request_dept_sem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text_secondary"
+                style="@style/TextAppearance.AU.Caption" />
+
+            <!-- Row 3: Skill chip (shows skill wanted) -->
+            <TextView
+                android:id="@+id/request_skill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                style="@style/SkillChip"
+                android:textStyle="bold" />
+
+            <!-- Row 4: Description (2 lines max) -->
+            <TextView
+                android:id="@+id/request_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:textColor="@color/text_secondary"
+                android:maxLines="2"
+                android:ellipsize="end"
+                style="@style/TextAppearance.AU.Caption" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border_light"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Row 5: X hours ago + Offer Help -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/request_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_tertiary"
+                    style="@style/TextAppearance.AU.Caption" />
+
+                <TextView
+                    android:id="@+id/btn_offer_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="Offer Help →"
+                    android:textColor="@color/accent_primary"
+                    android:textStyle="bold"
+                    style="@style/TextAppearance.AU.Button"
+                    android:textColorLink="@color/accent_primary"
+                    android:background="@android:color/transparent" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

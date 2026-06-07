@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_secondary"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="88dp">
+
+        <!-- Toolbar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@color/bg_primary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textColor="@color/text_primary"
+                style="@style/TextAppearance.AU.Title"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Sharp bottom border for Toolbar -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/border_light" />
+
+        <!-- Profile Header Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="@dimen/radius_lg"
+            app:cardBackgroundColor="@color/bg_card"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp"
+            app:contentPadding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Avatar: 64dp circle -->
+                <com.auiskillbridge.views.AvatarTextView
+                    android:id="@+id/profile_avatar"
+                    android:layout_width="@dimen/avatar_lg"
+                    android:layout_height="@dimen/avatar_lg"
+                    android:background="@drawable/bg_avatar_circle"
+                    android:gravity="center"
+                    android:textColor="@color/text_primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"
+                    style="@style/TextAppearance.AU.Title" />
+
+                <!-- Name -->
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    style="@style/TextAppearance.AU.Title" />
+
+                <!-- Roll Number -->
+                <TextView
+                    android:id="@+id/profile_roll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_tertiary"
+                    android:layout_marginBottom="8dp"
+                    style="@style/TextAppearance.AU.Body" />
+
+                <!-- Dept + Semester Badge -->
+                <TextView
+                    android:id="@+id/profile_dept_sem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_chip_dept"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/accent_primary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"
+                    style="@style/DeptBadge" />
+
+                <!-- Bio Label -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BIO"
+                    android:layout_marginBottom="6dp"
+                    style="@style/TextAppearance.AU.Label" />
+
+                <!-- Bio EditText -->
+                <EditText
+                    android:id="@+id/profile_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="80dp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_tertiary"
+                    android:background="@drawable/edit_text_bg"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"
+                    style="@style/TextAppearance.AU.Body" />
+
+                <!-- Save Profile Button (Outlined Style) -->
+                <TextView
+                    android:id="@+id/btn_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Save Profile"
+                    android:gravity="center"
+                    style="@style/SecondaryButton" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SECTION: MY SKILLS -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/my_skills"
+                android:textAllCaps="true"
+                style="@style/TextAppearance.AU.Label" />
+
+            <TextView
+                android:id="@+id/btn_add_skill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="+ Add"
+                android:textColor="@color/accent_primary"
+                android:textStyle="bold"
+                android:padding="6dp"
+                style="@style/TextAppearance.AU.Body" />
+        </RelativeLayout>
+
+        <!-- Skills ListView inside Card for border -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="@dimen/radius_lg"
+            app:cardBackgroundColor="@color/bg_card"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp">
+
+            <ListView
+                android:id="@+id/my_skills_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/border_light"
+                android:dividerHeight="1dp"
+                android:background="@color/transparent"
+                android:scrollbars="none" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- SECTION: SAVED MENTORS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Saved Mentors"
+            android:textAllCaps="true"
+            style="@style/TextAppearance.AU.Label" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="@dimen/radius_lg"
+            app:cardBackgroundColor="@color/bg_card"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp"
+            app:contentPadding="16dp">
+
+            <TextView
+                android:id="@+id/saved_mentors_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                style="@style/TextAppearance.AU.Body" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- SECTION: SETTINGS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Settings"
+            android:textAllCaps="true"
+            style="@style/TextAppearance.AU.Label" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="@dimen/radius_lg"
+            app:cardBackgroundColor="@color/bg_card"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Dark Mode Row -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Dark Mode"
+                        android:textColor="@color/text_primary"
+                        style="@style/TextAppearance.AU.Body" />
+
+                    <Switch
+                        android:id="@+id/switch_dark_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false" />
+                </RelativeLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/border_light"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- About Row -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/btn_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/chevron_about"
+                        android:text="About AUSkillBridge"
+                        android:textColor="@color/accent_primary"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        style="@style/TextAppearance.AU.Body"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chevron_about"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/text_tertiary"
+                        android:contentDescription="Next" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

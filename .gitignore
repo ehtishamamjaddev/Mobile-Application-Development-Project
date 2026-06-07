@@ -1,0 +1,26 @@
+# Gradle files
+.gradle/
+build/
+
+# Android Studio / IntelliJ files
+.idea/
+*.iml
+*.ipr
+*.iws
+local.properties
+.navigation/
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Built APKs/AARs
+*.apk
+*.aar
+app/build/
+
+# Gradle Wrapper
+# Excluding wrapper from gitignore so the gradle wrapper can be tracked if present, but since it is absent, we track the source files

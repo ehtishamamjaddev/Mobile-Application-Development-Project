@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_secondary"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@color/bg_primary">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_chevron_right"
+            android:rotation="180"
+            app:tint="@color/text_primary"
+            android:contentDescription="Back"
+            android:padding="6dp" />
+
+        <!-- Title & Subtitle Container inside Toolbar -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/search_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end"
+                style="@style/TextAppearance.AU.Title" />
+
+            <TextView
+                android:id="@+id/results_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_tertiary"
+                android:textSize="12sp"
+                style="@style/TextAppearance.AU.Caption" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Sharp bottom border for Toolbar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_light" />
+
+    <!-- Results Recycler View -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_results_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="8dp" />
+
+    <!-- Empty State -->
+    <include
+        android:id="@+id/empty_state"
+        layout="@layout/layout_empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+</LinearLayout>

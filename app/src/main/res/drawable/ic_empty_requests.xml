@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Empty state: no requests illustration -->
+    <!-- Clipboard/document icon -->
+    <path
+        android:fillColor="#1E1E2E"
+        android:pathData="M35,15 L85,15 C87.76,15 90,17.24 90,20 L90,100 C90,102.76 87.76,105 85,105 L35,105 C32.24,105 30,102.76 30,100 L30,20 C30,17.24 32.24,15 35,15Z" />
+    <!-- Lines on clipboard -->
+    <path
+        android:fillColor="#2A2A3A"
+        android:pathData="M42,35 L78,35"
+        android:strokeWidth="3"
+        android:strokeColor="#2A2A3A" />
+    <path
+        android:fillColor="#2A2A3A"
+        android:pathData="M42,50 L78,50"
+        android:strokeWidth="3"
+        android:strokeColor="#2A2A3A" />
+    <path
+        android:fillColor="#2A2A3A"
+        android:pathData="M42,65 L65,65"
+        android:strokeWidth="3"
+        android:strokeColor="#2A2A3A" />
+    <!-- Checkmark -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M50,80 L58,88 L75,70"
+        android:strokeWidth="4"
+        android:strokeColor="#7C6FFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

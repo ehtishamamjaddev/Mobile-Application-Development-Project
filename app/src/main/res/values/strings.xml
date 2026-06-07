@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- All strings for AUSkillBridge — AU-specific copy throughout -->
+<resources>
+    <!-- ── App Identity ── -->
+    <string name="app_name">AUSkillBridge</string>
+    <string name="app_tagline">Connect. Learn. Grow — Air University</string>
+    <string name="app_full_name">AUSkillBridge — Peer Skill Exchange</string>
+
+    <!-- ── Credits ── -->
+    <string name="course_name">Mobile Application Development</string>
+    <string name="instructor_name">Dr. Adnan Aslam</string>
+    <string name="institution">Air University Islamabad</string>
+    <string name="team_member_1">M Ehtisham Amjad (231996)</string>
+    <string name="team_member_2">M Abdullah (232052)</string>
+    <string name="team_member_3">Aman Mir (233002)</string>
+
+    <!-- ── Bottom Navigation ── -->
+    <string name="nav_home">Home</string>
+    <string name="nav_explore">Explore</string>
+    <string name="nav_requests">Requests</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_notifications">Alerts</string>
+
+    <!-- ── Home Screen ── -->
+    <string name="greeting_morning">Good morning! Ready to learn something new today?</string>
+    <string name="greeting_afternoon">Good afternoon! Any AU student needs your help today?</string>
+    <string name="greeting_evening">Good evening! Explore skills before the night is over.</string>
+    <string name="greeting_night">Still up? AU students never stop learning.</string>
+    <string name="home_subtitle">Discover skilled AU students near you</string>
+    <string name="section_featured">Featured Mentors</string>
+    <string name="section_all_mentors">All AU Mentors</string>
+    <string name="search_hint">Search AU students by skill…</string>
+
+    <!-- ── Explore Screen ── -->
+    <string name="explore_header">Browse by Skill Area</string>
+    <string name="explore_subtitle">Find AU students who can help</string>
+
+    <!-- ── Requests Screen ── -->
+    <string name="requests_header">Open Skill Requests</string>
+    <string name="requests_subtitle">Help a fellow AU student</string>
+    <string name="offer_help">Offer Help →</string>
+    <string name="post_request">Post Request</string>
+
+    <!-- ── Profile Screen ── -->
+    <string name="my_skills">My Skills</string>
+    <string name="saved_mentors">Saved Mentors</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="about_app">About AUSkillBridge</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="add_skill">Add Skill</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="default_bio">Hello! I\'m an AU student looking to connect and learn.</string>
+
+    <!-- ── Notifications Screen ── -->
+    <string name="notifications_header">Notifications</string>
+    <string name="notifications_subtitle">Stay updated with AU activity</string>
+
+    <!-- ── Mentor Detail ── -->
+    <string name="skills_offered">Skills Offered</string>
+    <string name="send_request">Send Request</string>
+    <string name="reviews">Reviews</string>
+    <string name="online_now">Online Now</string>
+    <string name="offline">Offline</string>
+
+    <!-- ── Post Request ── -->
+    <string name="post_request_title">Post a Skill Request</string>
+    <string name="skill_needed_hint">Skill Needed (e.g. Flutter, MATLAB)</string>
+    <string name="description_hint">Describe what you need help with…</string>
+    <string name="select_urgency">Select Urgency</string>
+    <string name="select_department">Select Department</string>
+    <string name="select_semester">Select Semester</string>
+    <string name="submit_request">Submit Request</string>
+    <string name="request_submitted">Request posted! AU students will see it shortly.</string>
+
+    <!-- ── Search ── -->
+    <string name="search_results_title">Search Results</string>
+    <string name="mentors_found">%1$d mentors found for \"%2$s\"</string>
+    <string name="no_results">No results found</string>
+
+    <!-- ── Onboarding ── -->
+    <string name="onboarding_title_1">Built for AU Students</string>
+    <string name="onboarding_desc_1">Struggling with your DSA assignment or CAD project? Your senior batchmate probably knows exactly how to help.</string>
+    <string name="onboarding_title_2">Offer Your Skills</string>
+    <string name="onboarding_desc_2">Good at Flutter? Strong in MATLAB? List your skills and help fellow AU students while building your own profile.</string>
+    <string name="onboarding_title_3">Find Your Mentor</string>
+    <string name="onboarding_desc_3">Browse students by department, semester, and skill. Connect. Learn. Grow — together at Air University.</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get Started</string>
+
+    <!-- ── Empty States (AU Flavour) ── -->
+    <string name="empty_mentors">No AU mentors found for this skill yet. Be the first to offer it!</string>
+    <string name="empty_requests">No skill requests right now. Check back before exam season.</string>
+    <string name="empty_favorites">You haven\'t saved any mentors yet. Start exploring!</string>
+    <string name="explore_skills_cta">Explore Skills →</string>
+
+    <!-- ── About Dialog ── -->
+    <string name="about_title">About AUSkillBridge</string>
+    <string name="about_description">AUSkillBridge is a peer-to-peer skill exchange platform exclusively for Air University Islamabad students. Built as a final term project for Mobile Application Development.\n\nCourse: Mobile Application Development\nInstructor: Dr. Adnan Aslam\nInstitution: Air University Islamabad\n\nTeam Members:\n• M Ehtisham Amjad (231996)\n• M Abdullah (232052)\n• Aman Mir (233002)\n\nVersion 1.0 — 2025</string>
+    <string name="close">Close</string>
+
+    <!-- ── Urgency Labels ── -->
+    <string name="urgency_high">HIGH</string>
+    <string name="urgency_medium">MEDIUM</string>
+    <string name="urgency_low">LOW</string>
+
+    <!-- ── Misc ── -->
+    <string name="skills_count">%d skills</string>
+    <string name="rating_format">★ %.1f</string>
+    <string name="review_count">(%d reviews)</string>
+    <string name="mentor_count">%d mentors</string>
+    <string name="roll_format">Roll: %s</string>
+    <string name="dept_semester_format">%1$s • %2$s</string>
+    <string name="greeting_format">%1$s, %2$s!</string>
+    <string name="remove">Remove</string>
+    <string name="edit">Edit</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="confirm">Confirm</string>
+    <string name="enter_skill">Enter skill name</string>
+    <string name="skill_added">Skill added!</string>
+    <string name="skill_removed">Skill removed</string>
+    <string name="profile_saved">Profile saved!</string>
+    <string name="added_to_favorites">Added to favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+    <string name="offer_to_help_title">Offer to Help</string>
+    <string name="offer_to_help_message">Would you like to offer help for this request?</string>
+    <string name="help_offered">Your offer has been sent! The student will be notified.</string>
+    <string name="fill_all_fields">Please fill all fields</string>
+</resources>

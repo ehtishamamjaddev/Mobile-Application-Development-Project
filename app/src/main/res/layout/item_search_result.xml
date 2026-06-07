@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Search Result Item — reuses mentor card layout pattern -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:orientation="horizontal"
+    android:padding="@dimen/card_padding"
+    android:layout_margin="@dimen/spacing_sm"
+    android:gravity="center_vertical">
+
+    <!-- Avatar -->
+    <com.auiskillbridge.views.AvatarTextView
+        android:id="@+id/result_avatar"
+        android:layout_width="@dimen/avatar_size_medium"
+        android:layout_height="@dimen/avatar_size_medium"
+        android:background="@drawable/bg_avatar_circle"
+        android:gravity="center"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="@dimen/spacing_md" />
+
+    <!-- Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/result_dept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_caption" />
+
+        <TextView
+            android:id="@+id/result_skills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accent_violet"
+            android:textSize="@dimen/text_caption"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- Rating -->
+    <com.auiskillbridge.views.CleanTextView
+        android:id="@+id/result_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/star_filled"
+        android:textSize="@dimen/text_body"
+        android:textStyle="bold" />
+
+</LinearLayout>

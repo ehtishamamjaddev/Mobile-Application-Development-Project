@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/bg_primary"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <!-- Left: small skill dot (8dp circle, accent_light) -->
+    <View
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/bg_avatar_circle"
+        android:backgroundTint="@color/accent_light"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Center: skill name (14sp, Medium, text_primary) -->
+    <TextView
+        android:id="@+id/skill_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        style="@style/TextAppearance.AU.Subtitle" />
+
+    <!-- Right: remove icon "×" (text_tertiary, 20sp) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="×"
+        android:textColor="@color/text_tertiary"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:padding="4dp" />
+
+</LinearLayout>

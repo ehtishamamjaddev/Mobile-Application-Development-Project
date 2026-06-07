@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Light Theme for AUSkillBridge -->
+    <style name="Theme.AUSkillBridge" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Brand Colors -->
+        <item name="colorPrimary">@color/accent_primary</item>
+        <item name="colorPrimaryVariant">@color/accent_pressed</item>
+        <item name="colorOnPrimary">@color/text_on_accent</item>
+        <item name="colorSecondary">@color/accent_primary</item>
+        <item name="colorSecondaryVariant">@color/accent_pressed</item>
+        <item name="colorOnSecondary">@color/text_on_accent</item>
+
+        <!-- Surface and Window Background -->
+        <item name="colorSurface">@color/bg_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:colorBackground">@color/bg_secondary</item>
+        <item name="android:windowBackground">@color/bg_secondary</item>
+
+        <!-- Text Colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <!-- Status & Navigation Bars -->
+        <item name="android:statusBarColor">@color/bg_primary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <!-- Default Style Overrides -->
+        <item name="textAppearanceHeadline5">@style/TextAppearance.AU.Heading</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.AU.Body</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.AU.Caption</item>
+
+        <item name="bottomNavigationStyle">@style/AU.BottomNav</item>
+        <item name="materialCardViewStyle">@style/AU.Card</item>
+        <item name="editTextStyle">@style/AU.Input</item>
+    </style>
+
+    <!-- Splash Theme — clean white background, light status bar, dark icons -->
+    <style name="Theme.AUSkillBridge.Splash" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:statusBarColor">@color/bg_primary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <!-- Bottom Navigation View Styles -->
+    <style name="AU.BottomNav" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:background">@color/nav_background</item>
+        <item name="android:elevation">0dp</item>
+        <item name="itemIconTint">@color/bottom_nav_colors</item>
+        <item name="itemTextColor">@color/bottom_nav_colors</item>
+        <item name="itemActiveIndicatorStyle">@style/AU.NavIndicator</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <!-- Navigation Active Indicator -->
+    <style name="AU.NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/nav_indicator</item>
+    </style>
+
+    <!-- Dialog Theme -->
+    <style name="AUDialog" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@color/bg_elevated</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+    </style>
+
+    <!-- Compatibility/Original style names mapped to new styles -->
+    <style name="AUBottomNav" parent="AU.BottomNav" />
+    <style name="AUNavIndicator" parent="AU.NavIndicator" />
+</resources>

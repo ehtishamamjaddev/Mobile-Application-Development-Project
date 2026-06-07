@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/bg_primary"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <!-- Left: Icon Circle 36dp (accent_light bg, bell icon inside) -->
+    <FrameLayout
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_chip_skill"
+        android:layout_marginEnd="12dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@android:drawable/ic_popup_reminder"
+            app:tint="@color/accent_primary"
+            android:contentDescription="Notification Icon" />
+    </FrameLayout>
+
+    <!-- Center: Notification text + time -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notification_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            style="@style/TextAppearance.AU.Body" />
+
+        <TextView
+            android:id="@+id/notification_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/text_tertiary"
+            android:textSize="11sp"
+            style="@style/TextAppearance.AU.Caption" />
+    </LinearLayout>
+
+    <!-- Right: Unread dot (8dp accent circle) -->
+    <View
+        android:id="@+id/unread_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/bg_avatar_circle"
+        android:backgroundTint="@color/accent_primary"
+        android:layout_marginStart="12dp"
+        android:visibility="gone" />
+
+</LinearLayout>

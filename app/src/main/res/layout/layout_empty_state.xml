@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <!-- Illustration -->
+    <ImageView
+        android:id="@+id/empty_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_empty_mentors"
+        app:tint="@color/text_tertiary"
+        android:contentDescription="Empty state"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/empty_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No results"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="6dp"
+        style="@style/TextAppearance.AU.Title" />
+
+    <!-- Subtext -->
+    <TextView
+        android:id="@+id/empty_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_secondary"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        style="@style/TextAppearance.AU.Body" />
+
+    <!-- CTA Button -->
+    <TextView
+        android:id="@+id/empty_cta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/accent_primary"
+        android:textStyle="bold"
+        android:padding="8dp"
+        style="@style/TextAppearance.AU.Body" />
+
+</LinearLayout>

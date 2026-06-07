@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="@dimen/radius_lg"
+    app:cardBackgroundColor="@color/bg_card"
+    app:strokeColor="@color/border_light"
+    app:strokeWidth="1dp"
+    app:cardElevation="0dp"
+    app:contentPadding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- LEFT: Avatar Circle 48dp -->
+        <FrameLayout
+            android:id="@+id/avatar_container"
+            android:layout_width="@dimen/avatar_md"
+            android:layout_height="@dimen/avatar_md"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="12dp">
+
+            <com.auiskillbridge.views.AvatarTextView
+                android:id="@+id/mentor_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_avatar_circle"
+                android:gravity="center"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                style="@style/TextAppearance.AU.Title" />
+
+            <!-- Online dot -->
+            <View
+                android:id="@+id/online_dot"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/bg_avatar_circle"
+                android:backgroundTint="@color/color_success"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- RIGHT: Heart / Favorite Icon -->
+        <ImageView
+            android:id="@+id/btn_heart"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:src="@android:drawable/btn_star_big_off"
+            android:contentDescription="Favorite" />
+
+        <!-- CENTER: Name + badge + stats -->
+        <LinearLayout
+            android:id="@+id/mentor_info_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/avatar_container"
+            android:layout_toStartOf="@id/btn_heart"
+            android:orientation="vertical">
+
+            <!-- Name and Dept Badge Row -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mentor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/mentor_dept_badge"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    style="@style/TextAppearance.AU.Subtitle"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mentor_dept_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    style="@style/DeptBadge" />
+            </RelativeLayout>
+
+            <!-- Stats (Roll/Semester/Rating text) -->
+            <com.auiskillbridge.views.CleanTextView
+                android:id="@+id/mentor_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                style="@style/TextAppearance.AU.Caption"
+                android:textColor="@color/text_secondary" />
+
+        </LinearLayout>
+
+        <!-- Skill chips scrollable row -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mentor_info_container"
+            android:layout_toEndOf="@id/avatar_container"
+            android:layout_alignParentEnd="true"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_marginTop="4dp">
+            <LinearLayout
+                android:id="@+id/skills_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
